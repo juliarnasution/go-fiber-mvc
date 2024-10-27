@@ -13,6 +13,7 @@ go run main.go
 ```
 ```bash
 # API Routes
+GET / - Render home page
 POST /register - Register a new user
 POST /login - Login a user
 GET /users - List all users
