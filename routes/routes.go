@@ -9,9 +9,16 @@ import (
 )
 
 func SetupRoutes(app *fiber.App, db *gorm.DB) {
+	// Create services
     userService := services.NewUserService(db)
+
+	// Create controllers
     userController := controllers.NewUserController(userService)
     authController := controllers.NewAuthController(db)
+	homeController := controllers.NewHomeController()
+
+    // Home route
+    app.Get("/", homeController.RenderHomePage)
 
     // Public routes
 	app.Post("/register", authController.Register)

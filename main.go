@@ -7,7 +7,12 @@ import (
 )
 
 func main() {
-    app := fiber.New()
+	// Create a new HTML engine
+	engine := html.New("./views", ".html")
+	// Create a new Fiber app
+	app := fiber.New(fiber.Config{
+		Views: engine,
+	})
 
     // Initialize Database
     db := config.InitDatabase()
