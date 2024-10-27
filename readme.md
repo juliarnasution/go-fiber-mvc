@@ -1,4 +1,6 @@
 # Go Fiber MVC
+boilerplate for a Go Fiber MVC project 
+belum diuji coba, jadi modul yang dibutuhkan ditulis disini dulu, nanti dicoba kalau sudah ada waktu
 
 ## Installation
 ```bash
